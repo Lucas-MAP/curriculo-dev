@@ -20,11 +20,6 @@ Hospedado no **GitHub Pages**, ele foi criado como parte do meu aprendizado em d
 
 ---
 
-## 📷 Preview
-![Preview do currículo](src/imagem_curriculo.jpeg)
-
----
-
 ## 🚀 Próximos passos
 - Adicionar animações e efeitos visuais ✨  
 - Melhorar responsividade para mobile 📱  
