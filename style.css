@@ -1,0 +1,122 @@
+/* style.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #5d60648d; /* fundo claro */
+  background: #ccc;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px; /* só um respiro em volta */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.divimg {
+  color: #0077b6;
+  width: 70%;
+  margin-left: 20%;
+  display: flex;         /* coloca os itens (foto + texto) lado a lado */
+  align-items: center;   /* alinha verticalmente no centro */
+  align-self: auto;
+  gap: 10px;             /* espaço entre a foto e o texto */
+  border-radius: 2%;    /* deixa a imagem redonda */
+  background-color: #fff;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0f7bb5;
+}
+
+header h1 {
+  color: #0077b6; /* azul principal */
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section h2 {
+  color: #0077b6;
+  border-bottom: 2px solid #ff8800; /* detalhe laranja */
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #03768d; /* verde água */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 5px 5px 0 0;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#btn-pdf {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0077b6; /* azul principal */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#btn-pdf:hover {
+  background-color: #005f87; /* azul mais escuro no hover */
+}
+
+.divfooter  {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
