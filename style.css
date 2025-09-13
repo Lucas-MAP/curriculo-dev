@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
   background: #fff;
   padding: 30px;
@@ -32,8 +32,8 @@ header {
 
 .divimg {
   color: #0077b6;
-  width: 70%;
-  margin-left: 20%;
+  width: auto;
+  margin-left: 15%;
   display: flex;         /* coloca os itens (foto + texto) lado a lado */
   align-items: center;   /* alinha verticalmente no centro */
   align-self: auto;
@@ -119,4 +119,44 @@ footer {
   margin-top: 30px;
   font-size: 0.9rem;
   color: #666;
+}
+
+/* Notificação (toast) */
+.toast {
+  position: fixed;       /* fica grudado na tela, não no conteúdo */
+  bottom: 20px;          /* 20px acima do rodapé */
+  right: 20px;           /* 20px afastado da lateral direita */
+  background: #4caf50;   /* verde padrão (sucesso) */
+  color: white;          /* texto branco */
+  padding: 12px 20px;    /* espaço interno (margem de dentro) */
+  border-radius: 8px;    /* bordas arredondadas */
+  font-size: 14px;       /* tamanho da fonte */
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2); /* sombra de leve */
+  opacity: 0;            /* começa invisível */
+  transform: translateY(20px); /* começa um pouquinho mais baixo */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* animação */
+  z-index: 9999;         /* fica na frente de tudo */
+}
+.toast.show {
+  opacity: 1;           /* aparece */
+  transform: translateY(0); /* sobe pra posição certa */
+}
+.toast.error {
+  background: #f44336;  /* se for erro → vermelho */
+}
+
+.links-header {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.links-header a {
+  text-decoration: none;   /* tira o sublinhado */
+  color: #007bff;          /* cor azul */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.links-header a:hover {
+  color: #0056b3;          /* cor mais escura quando passa o mouse */
 }
