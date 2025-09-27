@@ -1,37 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Diz pro navegador que o documento é HTML5 -->
+<html lang="pt-br"> <!-- Define a linguagem principal da página (pt-br = português do Brasil) -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo - Lucas</title>
+  <meta charset="UTF-8"> <!-- Suporte a acentuação e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Deixa o site responsivo (escala certa em celular/desktop) -->
+  <meta name="description" content="Currículo online de Lucas Mateus, desenvolvedor Front-End com experiência em HTML, CSS, JavaScript, React Native e Git/GitHub."> <!-- Descrição do site (ajuda em SEO e compartilhamento) -->
+  <title>Currículo - Lucas</title> <!-- Título da aba do navegador -->
+  
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Biblioteca de ícones (Devicon → HTML, CSS, JS, GitHub, React etc) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+  <!-- Container geral do currículo -->
   <div class="container">
+    
+    <!-- Foto + Nome -->
     <div class="divimg">
-      <img src="src/imagem_curriculo.jpeg" alt="Foto de Lucas Mateus" class="img">
-      <h1>Lucas Mateus</h1>
+      <img src="src/imagem_curriculo.jpeg" alt="Foto de Lucas Mateus" class="img"> <!-- Foto do currículo -->
+      <h1>Lucas Mateus</h1> <!-- Nome em destaque -->
     </div>
 
+    <!-- Cabeçalho com título e contatos -->
     <header>
-      <h1>Desenvolvedor Front-End</h1>
-      <div div class="links-header">
-        <a href="mailto:luckdev.98@gmail.com">📧 luckdev.98@gmail.com</a> |
-        <a href="https://wa.me/5591984378230" target="_blank">📞 (91) 98437-8230</a> |
-        <a href="https://github.com/Lucas-MAP" target="_blank">🌐 github.com/Lucas-MAP</a>
+      <h1>Desenvolvedor Front-End</h1> <!-- Cargo -->
+      <div class="links-header"> <!-- Links de contato -->
+        <a href="mailto:luckdev.98@gmail.com">📧 luckdev.98@gmail.com</a> | <!-- E-mail -->
+        <a href="https://wa.me/5591984378230" target="_blank">📞 (91) 98437-8230</a> | <!-- WhatsApp -->
+        <a href="https://github.com/Lucas-MAP" target="_blank">🌐 github.com/Lucas-MAP</a> <!-- GitHub -->
       </div>
     </header>
 
+    <!-- Seção Sobre Mim -->
     <section class="section">
       <h2>Sobre Mim</h2>
-        <p>
-          Sou um desenvolvedor front-end em formação, apaixonado por criar interfaces modernas, responsivas e intuitivas.
-          Busco oportunidades para aplicar meus conhecimentos em HTML,
-          CSS e JavaScript em projetos reais.
-        </p>
+      <p>
+        Sou um desenvolvedor front-end em formação, apaixonado por criar interfaces modernas, responsivas e intuitivas.
+        Busco oportunidades para aplicar meus conhecimentos em HTML,
+        CSS e JavaScript em projetos reais.
+      </p>
     </section>
 
+    <!-- Seção Experiência -->
     <section class="section">
       <h2>Experiência</h2>
       <ul>
@@ -40,6 +51,7 @@
       </ul>
     </section>
 
+    <!-- Seção Formação -->
     <section class="section">
       <h2>Formação</h2>
       <ul>
@@ -49,43 +61,54 @@
         <li><b>Ensino Médio</b> – Escola Estadual Professor Temistocles de Araujo(2015)</li>
       </ul>
     </section>
-    <section class="section skills">   
+
+    <!-- Seção Habilidades -->
+    <section class="section">   
       <h2>Habilidades</h2>
-      <div class="skill">
-        <i class="devicon-html5-plain colored"></i>
-        <p>HTML5</p>
-      </div>
-      <div class="skill">
-        <i class="devicon-css3-plain colored"></i>
-        <p>CSS3</p>
-      </div>
-      <div class="skill">
-        <i class="devicon-javascript-plain colored"></i>
-        <p>JavaScript</p>
-      </div>
-      <div class="skill">
-        <i class="devicon-git-plain colored"></i>
-        <p>Git</p>
-      </div>
-      <div class="skill">
-        <i class="devicon-github-original"></i>
-        <p>GitHub</p>
-      </div>
-      <div class="skill">
-        <i class="devicon-react-original colored"></i>
-        <p>React Native</p>
+      <div class="section skills">
+        <!-- Cada .skill é um "bloco" com ícone + texto -->
+        <div class="skill">
+          <i class="devicon-html5-plain colored"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-css3-plain colored"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-javascript-plain colored"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-git-plain colored"></i>
+          <p>Git</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-github-original"></i>
+          <p>GitHub</p>
+        </div>
+        <div class="skill">
+          <i class="devicon-react-original colored"></i>
+          <p>React Native</p>
+        </div>
       </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
       <p>© 2025 - Desenvolvido por Lucas Mateus</p>
     </footer>
   </div>
+
+  <!-- Botão fora do container (embaixo do currículo) -->
   <div class="divfooter">
-  <button id="btn-pdf">📄 Baixar Currículo em PDF</button>
+    <button id="btn-pdf">📄 Baixar Currículo em PDF</button>
   </div>
+
+  <!-- Biblioteca para gerar PDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="index.js"></script>
   
+  <!-- Arquivo JS do projeto -->
+  <script src="index.js"></script>
 </body>
 </html>

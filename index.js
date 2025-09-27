@@ -47,3 +47,7 @@ document.getElementById("btn-pdf").addEventListener("click", () => {
       showToast("❌ Ocorreu um erro ao baixar o currículo.", true);
     });
 });
+//html2pdf()          // cria a "impressora de PDF"
+//.set(opt)         // define as configurações do PDF
+//.from(element)    // pega o currículo como conteúdo (.container)
+//.save()          // salva o arquivo no computador

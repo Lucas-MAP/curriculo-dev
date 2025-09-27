@@ -1,132 +1,133 @@
-/* Reset básico → zera margens/paddings padrões do navegador */
+/* ===== RESET BÁSICO ===== */
+/* Remove margens/paddings padrão e garante cálculo de largura consistente */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* evita que padding/border aumentem a largura real */
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif; /* fonte padrão */
 }
 
-/* Estilo geral do corpo da página */
+/* ===== ESTILO GERAL ===== */
 body {
-  background: #ccc;   /* cor de fundo cinza */
-  color: #222;        /* cor do texto principal */
-  line-height: 1.6;   /* altura da linha (espaçamento vertical do texto) */
-  padding: 20px;      /* espaço em volta do conteúdo */
+  background: #bebebe;   /* fundo cinza suave */
+  color: #222;        /* cor do texto padrão */
+  line-height: 1.6;   /* altura das linhas para facilitar leitura */
+  padding: 20px;      /* espaço nas bordas do site */
 }
 
-/* Container principal do currículo */
+/* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: 700px;   /* largura máxima do currículo */
-  margin: auto;       /* centraliza no meio da tela */
-  background: #fff;   /* fundo branco */
-  padding: 30px;      /* espaço interno */
-  border-radius: 12px; /* cantos arredondados */
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra leve */
+  max-width: 700px;                      /* largura máxima */
+  margin: auto;                          /* centraliza no meio da tela */
+  background: #ffffff;                      /* fundo branco */
+  padding: 30px;                         /* espaço interno */
+  border-radius: 12px;                   /* bordas arredondadas */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra suave */
 }
 
-/* Cabeçalho */
+/* ===== CABEÇALHO ===== */
 header {
-  text-align: center;   /* centraliza texto */
-  margin-bottom: 20px;  /* espaço abaixo */
+  text-align: center;   /* centraliza o conteúdo */
+  margin-bottom: 20px;  /* espaço abaixo do header */
 }
 
-/* Caixa que contém foto + nome */
+/* Foto + nome */
 .divimg {
-  color: #0077b6;       
-  margin-left: 15%;     /* dá um espacinho da esquerda */
-  display: flex;        /* coloca imagem e nome lado a lado */
-  align-items: center;  /* alinha verticalmente no centro */
-  gap: 10px;            /* espaço entre imagem e texto */
-  background-color: #fff;
+  color: #0077b6;                 /* azul para destaque */
+  margin: 0 auto 20px auto;       /* centralizado + espaço abaixo */
+  display: flex;                  
+  align-items: center;            /* alinha no centro vertical */
+  gap: 10px;                      /* espaço entre itens */
+  justify-content: center;        /* centraliza horizontalmente */
+  flex-wrap: wrap;                 /* quebra linha no celular */
+  background-color: #ffffff;
 }
 
 /* Foto do currículo */
 img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;  /* deixa redonda */
-  object-fit: cover;   /* garante que a foto preencha certinho */
+  border-radius: 50%;     /* formato circular */
+  object-fit: cover;      /* mantém proporção sem distorcer */
   border: 2px solid #0f7bb5; /* borda azul */
 }
 
-/* Nome do cabeçalho */
+/* Nome principal */
 header h1 {
   color: #0077b6;
-  font-size: 2.5rem;   /* tamanho grande */
+  font-size: 2.2rem;   /* título grande */
 }
 
-/* Subtítulo do cabeçalho (ex: desenvolvedor) */
+/* Subtítulo */
 header p {
-  font-size: 1.2rem;
-  color: #444;         /* cinza */
+  font-size: 1.1rem;
+  color: #444;         /* cinza mais suave */
 }
 
-/* Cada seção (Sobre mim, Formação, etc.) */
+/* ===== SEÇÕES ===== */
 .section {
   margin-bottom: 25px; /* espaço entre seções */
 }
 
-/* Título das seções */
 .section h2 {
-  color: #0077b6;
-  border-bottom: 2px solid #ff8800; /* linha laranja abaixo do título */
-  display: inline-block;            /* faz a linha ocupar só o texto */
+  color: #0077b6;                        /* azul */
+  border-bottom: 2px solid #ff8800;      /* linha laranja embaixo */
+  display: inline-block;                 /* linha acompanha o texto */
   margin-bottom: 10px;
   padding-bottom: 3px;
 }
 
-/* Remove bolinhas padrão das listas */
+/* Listas (experiência, formação, etc.) */
 ul {
-  list-style: none;
+  list-style: none; /* remove bolinhas padrão */
 }
 
-/* Espaço entre cada item da lista */
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* espaço entre itens */
 }
 
-/* Container de habilidades (skills) */
+/* ===== HABILIDADES ===== */
 .skills {
-  display: flex;         /* coloca itens lado a lado */
-  flex-wrap: wrap;       /* quebra linha quando não cabe */
-  gap: 10px;             /* espaço entre os blocos */
+  display: flex;
+  flex-wrap: wrap;          /* quebra linha quando faltar espaço */
+  justify-content: center;  /* centraliza ícones */
+  gap: 5px;
+  margin-top: 20px;
 }
 
-/* Cada habilidade (ícone + texto) */
 .skill {
   display: flex;
-  flex-direction: column; /* ícone em cima, texto embaixo */
-  align-items: center;    /* centraliza no meio */
-  flex: 1 1 100px;        /* cresce/encolhe, mínimo 100px */
-  max-width: 60px;       /* impede que fique gigante */
+  flex-direction: column;   /* ícone em cima, texto embaixo */
+  align-items: center;      /* centraliza no meio */
+  flex: 1 1 80px;           /* cresce/diminui, mínimo 80px */
+  max-width: 100px;         /* não ultrapassa 100px */
   text-align: center;
 }
 
-/* Ícones de habilidades */
+/* Ícones */
 .skill i {
-  font-size: 30px;       /* tamanho do ícone */
-  transition: transform 0.3s ease; /* animação suave no hover */
-  cursor: pointer;       /* "mãozinha" quando passa o mouse */
-  margin: 3px;
+  font-size: 35px;
+  transition: transform 0.3s ease; /* animação suave */
+  cursor: pointer;
 }
 
 .skill i:hover {
-  transform: scale(1.2); /* aumenta quando passa o mouse */
+  transform: scale(1.2); /* aumenta no hover */
 }
 
-/* Nome abaixo do ícone */
+/* Texto abaixo do ícone */
 .skill p {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #333;
 }
 
-/* Botão de baixar PDF */
+/* ===== BOTÃO PDF ===== */
 #btn-pdf {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #0077b6; /* azul */
+  background-color: #0077b6;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -137,10 +138,10 @@ ul li {
 }
 
 #btn-pdf:hover {
-  background-color: #005f87; /* azul mais escuro ao passar o mouse */
+  background-color: #005f87; /* tom mais escuro ao passar o mouse */
 }
 
-/* Rodapé (tanto <footer> quanto .divfooter) */
+/* ===== RODAPÉ ===== */
 footer,
 .divfooter {
   text-align: center;
@@ -149,45 +150,73 @@ footer,
   color: #666;
 }
 
-/* Links do cabeçalho */
+/* Links de contato no cabeçalho */
 .links-header {
   margin-top: 10px;
   font-size: 14px;
 }
 
 .links-header a {
-  text-decoration: none;   /* remove o sublinhado */
-  color: #007bff;          /* azul */
+  text-decoration: none;    /* remove sublinhado */
+  color: #007bff;           /* azul padrão */
   font-weight: 500;
-  transition: color 0.3s;  /* animação suave na cor */
+  transition: color 0.3s;
 }
 
 .links-header a:hover {
-  color: #0056b3;          /* azul mais escuro no hover */
+  color: #0056b3; /* azul mais escuro no hover */
 }
 
-/* Caixa de notificação (toast) */
+/* ===== NOTIFICAÇÕES (TOAST) ===== */
 .toast {
-  position: fixed;      /* fica preso na tela */
-  bottom: 20px;         /* distância do rodapé */
-  right: 20px;          /* distância da lateral */
-  background: #4caf50;  /* verde padrão (sucesso) */
+  position: fixed;          /* sempre visível */
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;      /* verde sucesso */
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
   font-size: 14px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-  opacity: 0;           /* começa invisível */
-  transform: translateY(20px); /* começa um pouco abaixo */
+  opacity: 0;               /* começa invisível */
+  transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 9999;        /* fica acima de tudo */
+  z-index: 9999;            /* aparece acima de tudo */
 }
 
 .toast.show {
-  opacity: 1;           /* aparece */
-  transform: translateY(0); /* sobe */
+  opacity: 1;               /* aparece */
+  transform: translateY(0); /* sobe suavemente */
 }
 
 .toast.error {
-  background: #f44336;  /* vermelho para erro */
+  background: #f44336; /* vermelho erro */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px; /* menos padding em telas menores */
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* título menor */
+  }
+
+  .skills {
+    gap: 15px; /* mais espaço entre ícones */
+  }
+
+  .skill i {
+    font-size: 28px; /* ícones menores */
+  }
+
+  .skill p {
+    font-size: 12px;
+  }
 }
