@@ -1,106 +1,132 @@
-/* style.css */
-
-/* Reset básico */
+/* Reset básico → zera margens/paddings padrões do navegador */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* evita que padding/border aumentem a largura real */
+  font-family: Arial, Helvetica, sans-serif; /* fonte padrão */
 }
 
+/* Estilo geral do corpo da página */
 body {
-  background-color: #5d60648d; /* fundo claro */
-  background: #ccc;
-  color: #222;
-  line-height: 1.6;
-  padding: 20px; /* só um respiro em volta */
+  background: #ccc;   /* cor de fundo cinza */
+  color: #222;        /* cor do texto principal */
+  line-height: 1.6;   /* altura da linha (espaçamento vertical do texto) */
+  padding: 20px;      /* espaço em volta do conteúdo */
 }
 
+/* Container principal do currículo */
 .container {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  max-width: 700px;   /* largura máxima do currículo */
+  margin: auto;       /* centraliza no meio da tela */
+  background: #fff;   /* fundo branco */
+  padding: 30px;      /* espaço interno */
+  border-radius: 12px; /* cantos arredondados */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* sombra leve */
 }
 
+/* Cabeçalho */
 header {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: center;   /* centraliza texto */
+  margin-bottom: 20px;  /* espaço abaixo */
 }
 
+/* Caixa que contém foto + nome */
 .divimg {
-  color: #0077b6;
-  width: auto;
-  margin-left: 15%;
-  display: flex;         /* coloca os itens (foto + texto) lado a lado */
-  align-items: center;   /* alinha verticalmente no centro */
-  align-self: auto;
-  gap: 10px;             /* espaço entre a foto e o texto */
-  border-radius: 2%;    /* deixa a imagem redonda */
+  color: #0077b6;       
+  margin-left: 15%;     /* dá um espacinho da esquerda */
+  display: flex;        /* coloca imagem e nome lado a lado */
+  align-items: center;  /* alinha verticalmente no centro */
+  gap: 10px;            /* espaço entre imagem e texto */
   background-color: #fff;
 }
 
+/* Foto do currículo */
 img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #0f7bb5;
+  border-radius: 50%;  /* deixa redonda */
+  object-fit: cover;   /* garante que a foto preencha certinho */
+  border: 2px solid #0f7bb5; /* borda azul */
 }
 
+/* Nome do cabeçalho */
 header h1 {
-  color: #0077b6; /* azul principal */
-  font-size: 2.5rem;
+  color: #0077b6;
+  font-size: 2.5rem;   /* tamanho grande */
 }
 
+/* Subtítulo do cabeçalho (ex: desenvolvedor) */
 header p {
   font-size: 1.2rem;
-  color: #444;
+  color: #444;         /* cinza */
 }
 
+/* Cada seção (Sobre mim, Formação, etc.) */
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 25px; /* espaço entre seções */
 }
 
+/* Título das seções */
 .section h2 {
   color: #0077b6;
-  border-bottom: 2px solid #ff8800; /* detalhe laranja */
-  display: inline-block;
+  border-bottom: 2px solid #ff8800; /* linha laranja abaixo do título */
+  display: inline-block;            /* faz a linha ocupar só o texto */
   margin-bottom: 10px;
   padding-bottom: 3px;
 }
 
+/* Remove bolinhas padrão das listas */
 ul {
   list-style: none;
 }
 
+/* Espaço entre cada item da lista */
 ul li {
   margin-bottom: 8px;
 }
 
-.skills span {
-  display: inline-block;
-  background: #03768d; /* verde água */
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 8px;
-  margin: 5px 5px 0 0;
-  font-size: 0.9rem;
+/* Container de habilidades (skills) */
+.skills {
+  display: flex;         /* coloca itens lado a lado */
+  flex-wrap: wrap;       /* quebra linha quando não cabe */
+  gap: 10px;             /* espaço entre os blocos */
 }
 
-footer {
+/* Cada habilidade (ícone + texto) */
+.skill {
+  display: flex;
+  flex-direction: column; /* ícone em cima, texto embaixo */
+  align-items: center;    /* centraliza no meio */
+  flex: 1 1 100px;        /* cresce/encolhe, mínimo 100px */
+  max-width: 60px;       /* impede que fique gigante */
   text-align: center;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #666;
 }
 
+/* Ícones de habilidades */
+.skill i {
+  font-size: 30px;       /* tamanho do ícone */
+  transition: transform 0.3s ease; /* animação suave no hover */
+  cursor: pointer;       /* "mãozinha" quando passa o mouse */
+  margin: 3px;
+}
+
+.skill i:hover {
+  transform: scale(1.2); /* aumenta quando passa o mouse */
+}
+
+/* Nome abaixo do ícone */
+.skill p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botão de baixar PDF */
 #btn-pdf {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #0077b6; /* azul principal */
+  background-color: #0077b6; /* azul */
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -111,52 +137,57 @@ footer {
 }
 
 #btn-pdf:hover {
-  background-color: #005f87; /* azul mais escuro no hover */
+  background-color: #005f87; /* azul mais escuro ao passar o mouse */
 }
 
-.divfooter  {
+/* Rodapé (tanto <footer> quanto .divfooter) */
+footer,
+.divfooter {
   text-align: center;
   margin-top: 30px;
   font-size: 0.9rem;
   color: #666;
 }
 
-/* Notificação (toast) */
-.toast {
-  position: fixed;       /* fica grudado na tela, não no conteúdo */
-  bottom: 20px;          /* 20px acima do rodapé */
-  right: 20px;           /* 20px afastado da lateral direita */
-  background: #4caf50;   /* verde padrão (sucesso) */
-  color: white;          /* texto branco */
-  padding: 12px 20px;    /* espaço interno (margem de dentro) */
-  border-radius: 8px;    /* bordas arredondadas */
-  font-size: 14px;       /* tamanho da fonte */
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.2); /* sombra de leve */
-  opacity: 0;            /* começa invisível */
-  transform: translateY(20px); /* começa um pouquinho mais baixo */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* animação */
-  z-index: 9999;         /* fica na frente de tudo */
-}
-.toast.show {
-  opacity: 1;           /* aparece */
-  transform: translateY(0); /* sobe pra posição certa */
-}
-.toast.error {
-  background: #f44336;  /* se for erro → vermelho */
-}
-
+/* Links do cabeçalho */
 .links-header {
   margin-top: 10px;
   font-size: 14px;
 }
 
 .links-header a {
-  text-decoration: none;   /* tira o sublinhado */
-  color: #007bff;          /* cor azul */
+  text-decoration: none;   /* remove o sublinhado */
+  color: #007bff;          /* azul */
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s;  /* animação suave na cor */
 }
 
 .links-header a:hover {
-  color: #0056b3;          /* cor mais escura quando passa o mouse */
+  color: #0056b3;          /* azul mais escuro no hover */
+}
+
+/* Caixa de notificação (toast) */
+.toast {
+  position: fixed;      /* fica preso na tela */
+  bottom: 20px;         /* distância do rodapé */
+  right: 20px;          /* distância da lateral */
+  background: #4caf50;  /* verde padrão (sucesso) */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  opacity: 0;           /* começa invisível */
+  transform: translateY(20px); /* começa um pouco abaixo */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;        /* fica acima de tudo */
+}
+
+.toast.show {
+  opacity: 1;           /* aparece */
+  transform: translateY(0); /* sobe */
+}
+
+.toast.error {
+  background: #f44336;  /* vermelho para erro */
 }

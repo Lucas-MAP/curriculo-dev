@@ -14,7 +14,7 @@ function showToast(message, isError = false) {
 
   document.body.appendChild(toast); // coloca a caixinha no body (na tela)
 
-  // faz a caixinha aparecer com animação
+  // cria um delay para realizar a função
   setTimeout(() => {
     toast.classList.add("show");
   }, 100);
